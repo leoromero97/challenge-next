@@ -1,0 +1,41 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.description {
+  margin-bottom: 4rem;
+}
+
+.form {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.label {
+  margin-bottom: 0.8rem;
+}
+
+.footer {
+  flex: 1;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
