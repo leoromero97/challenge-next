@@ -1,6 +1,7 @@
 .button {
   border-radius: 0.6rem;
   padding: 1.2rem 2.4rem;
+  max-width: 24rem;
   min-width: 22rem;
   text-align: center;
 }
@@ -8,7 +9,6 @@
 .buttonPrimary {
   background-color: var(--dodger-blue);
   color: var(--black-pearl);
-  max-width: 22rem;
 }
 
 .buttonPrimary:hover {
