@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import clsx from 'clsx';
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from './styles.module.css';
 
 const Home: NextPage = () => {
@@ -20,7 +21,11 @@ const Home: NextPage = () => {
         </form>
       </main>
       <footer className={styles.footer}>
-      <a href="http://localhost:3000/" className={clsx('button buttonTertiary')}>Cerrar sesión</a>
+      <Link href="http://localhost:3000/">
+        <a className={clsx('button buttonTertiary')}>
+          Cerrar sesión
+        </a>
+      </Link>
       </footer>
     </div>
   )
