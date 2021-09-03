@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
 import clsx from "clsx";
 import ToastError from "../../components/ToastError";
+import { REGEX_MAIL, REGEX_PASSWORD } from "../../constants/regex";
+
 import styles from "./styles.module.css";
 
 interface ILogin {
@@ -17,10 +19,6 @@ const Login: NextPage = () => {
     formState: { errors },
   } = useForm<ILogin>();
   const router = useRouter();
-  const REGEX_MAIL =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const REGEX_PASSWORD =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
 
   const onSubmit: SubmitHandler<ILogin> = (data) => router.push("/Home");
 
