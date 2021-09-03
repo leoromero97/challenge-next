@@ -1,0 +1,46 @@
+.h1 {
+  color: var(--dodger-blue);
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.h3 {
+  color: var(--eucalyptus);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.body-i {
+  color: var(--pattens-blue);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.label {
+  color: var(--pattens-blue);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1000px) {
+  .h1 {
+    font-size: 7rem;
+  }
+
+  .h3 {
+    font-size: 5rem;
+  }
+  
+  .body-i {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 1.4rem;
+  }
+}

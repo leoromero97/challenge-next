@@ -1,0 +1,26 @@
+.button {
+  border-radius: 0.6rem;
+  font-weight: 600;
+  padding: 1.2rem 6rem;
+  text-align: center;
+}
+
+.buttonPrimary {
+  background-color: var(--dodger-blue);
+  color: var(--black-pearl);
+}
+
+.buttonPrimary:hover {
+  background: var(--eucalyptus);
+  background: linear-gradient(to right, var(--dodger-blue), var(--eucalyptus));
+}
+
+.buttonTertiary {
+  color: var(--eucalyptus);
+  border: 1px solid var(--eucalyptus);
+}
+
+.buttonTertiary:hover {
+  background: var(--eucalyptus);
+  color: var(--black-pearl);
+}

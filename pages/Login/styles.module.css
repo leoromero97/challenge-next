@@ -1,0 +1,63 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.form {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.label,
+.labelPassword {
+  margin-bottom: 0.8rem;
+}
+
+.labelPassword {
+  margin-top: 2rem;
+}
+
+.errorMail,
+.errorPassword {
+  margin-bottom: 3rem;
+}
+
+.button {
+  align-self: center;
+  margin-top: 4rem;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 400px) {
+  .main {
+    max-width: 60rem;
+    padding: 4rem 2rem;
+  }
+
+  .form {
+    align-self: center;
+    width: 100%;
+  }
+}
