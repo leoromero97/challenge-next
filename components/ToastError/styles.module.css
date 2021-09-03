@@ -1,0 +1,12 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message {
+  color: var(--salmon);
+  line-height: 1.5;
+  margin-left: 1rem;
+  text-transform: none;
+}
