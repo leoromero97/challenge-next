@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import clsx from 'clsx';
 import Head from 'next/head';
-import styles from '../styles/login.module.css';
+import styles from '../styles/onboarding.module.css';
 
 const Onboarding: NextPage = () => {
   return (

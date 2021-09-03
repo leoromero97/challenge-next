@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -46,17 +45,10 @@
   .main {
     max-width: 60rem;
     padding: 4rem 2rem;
-    width: 80%;
   }
 
   .form {
     align-self: center;
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .form {
-    width: 80%;
   }
 }

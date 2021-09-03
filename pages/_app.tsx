@@ -7,6 +7,7 @@ import '../styles/inputs.css';
 import '../styles/texts.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+  <Component {...pageProps} />)
 }
 export default MyApp
