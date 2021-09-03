@@ -1,7 +1,7 @@
 .button {
   border-radius: 0.6rem;
-  padding: 1.2rem 2.4rem;
-  min-width: 22rem;
+  font-weight: 600;
+  padding: 1.2rem 6rem;
   text-align: center;
 }
 

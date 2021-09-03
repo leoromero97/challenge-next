@@ -1,18 +1,18 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
 }
 
 .main {
   align-items: center;
-  padding: 4rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 4rem 0;
   width: 100%;
 }
 
@@ -23,20 +23,23 @@
   padding-top: 2rem;
 }
 
-.label {
+.label,
+.labelPassword {
   margin-bottom: 0.8rem;
 }
 
-.inputEmail {
-  margin-bottom: 2rem;
+.labelPassword {
+  margin-top: 2rem;
 }
 
-.inputPassword {
-  margin-bottom: 6rem;
+.errorMail,
+.errorPassword {
+  margin-bottom: 3rem;
 }
 
 .button {
   align-self: center;
+  margin-top: 4rem;
 }
 
 .footer {
