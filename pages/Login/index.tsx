@@ -3,8 +3,9 @@ import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
 import clsx from "clsx";
 import ToastError from "../../components/ToastError";
+import Routes from "../../constants/routes";
 import { REGEX_MAIL, REGEX_PASSWORD } from "../../constants/regex";
-import useLogin from '../../hooks/useLogin';
+import useLogin from "../../hooks/useLogin";
 
 import styles from "./styles.module.css";
 
@@ -23,10 +24,10 @@ const Login: NextPage = () => {
   const { data, mutate, ...dataQuery } = useLogin();
 
   const onSubmit: SubmitHandler<ILogin> = (dataForm) => {
-    const success = (token: any) => {
-      router.push("/Home", token);
+    const success = () => {
+      router.push(Routes.Home);
     };
-    mutate(dataForm, {onSuccess: success});
+    mutate(dataForm, { onSuccess: success });
   };
 
   return (
