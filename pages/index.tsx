@@ -17,7 +17,9 @@ const Onboarding: NextPage = () => {
           </a>
         </Link>
         <Link href="#">
-          <a className="button buttonTertiary">Registrarse</a>
+          <a className="button buttonTertiary">
+            Registrarse
+          </a>
         </Link>
       </main>
     </div>
