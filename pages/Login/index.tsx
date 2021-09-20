@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react";
 import clsx from "clsx";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
 import ToastError from "../../components/ToastError";
 import ProgressBar from "../../components/ProgressBar";
+import ErrorScreen from "../../components/ErrorScreen";
 import Routes from "../../constants/routes";
 import { REGEX_MAIL, REGEX_PASSWORD } from "../../constants/regex";
 import useLogin from "../../hooks/useLogin";
-import ErrorScreen from "../../pages/ErrorScreen";
 
 import styles from "./styles.module.css";
 
@@ -25,40 +24,21 @@ const Login: NextPage = () => {
   } = useForm<ILogin>();
   const router = useRouter();
   const { data, mutate, ...dataQuery } = useLogin();
-  const [isError, setError] = useState(false);
-  const [value, setValue] = useState(0);
 
   const onSubmit: SubmitHandler<ILogin> = (dataForm) => {
     const success = () => {
       router.push(Routes.Home);
     };
-    const error = () => {
-      setError(true);
-    };
-    mutate(dataForm, { onSuccess: success, onError: error });
+    mutate(dataForm, { onSuccess: success });
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setValue((oldValue) => {
-        const newValue = oldValue + 10;
-
-        if (newValue === 100) {
-          clearInterval(interval);
-        }
-
-        return newValue;
-      });
-    }, 1000);
-  }, []);
 
   return (
     <div className={styles.container}>
       {dataQuery.isLoading ? (
-        <ProgressBar max={100} value={value} message="Cargando..." />
+        <ProgressBar message="Cargando..." />
       ) : (
         <main className={styles.main}>
-        {isError ? (
+        {dataQuery.error ? (
           <ErrorScreen
             title="Lo sentimos"
             message="No se pudimos iniciar sesión, vuelve a intentarlo"
