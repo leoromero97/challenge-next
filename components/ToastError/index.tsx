@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import Image from 'next/image'
+import Image from 'next/image';
 import icAlert from '../../public/assets/icons/alert.svg';
 import styles from './styles.module.css';
 

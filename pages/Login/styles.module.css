@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   min-height: 100vh;
   padding: 0 0.5rem;
 }
@@ -44,10 +44,8 @@
 
 .footer {
   display: flex;
-  flex: 1;
   flex-direction: column;
   padding-bottom: 2rem;
-  justify-content: flex-end;
 }
 
 @media screen and (min-width: 400px) {

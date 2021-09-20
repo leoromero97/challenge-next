@@ -6,6 +6,7 @@ import Routes from "../constants/routes";
 import styles from "./styles.module.css";
 
 const Onboarding: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
