@@ -1,9 +1,12 @@
 import type { NextPage } from "next";
 import clsx from "clsx";
 import Link from "next/link";
+import Routes from "../constants/routes";
+
 import styles from "./styles.module.css";
 
 const Onboarding: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -11,7 +14,7 @@ const Onboarding: NextPage = () => {
         <p className={clsx("body-i", styles.description)}>
           Registrate para poder jugar
         </p>
-        <Link href="Login/">
+        <Link href={Routes.Login}>
           <a className={clsx("button buttonPrimary", styles.buttonLogin)}>
             Iniciar sesión
           </a>

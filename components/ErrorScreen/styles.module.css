@@ -1,0 +1,16 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--outrageous-orange);
+}
+
+.message {
+  color: var(--pattens-blue);
+  line-height: 1.6;
+  text-transform: none;
+  text-align: center;
+}
