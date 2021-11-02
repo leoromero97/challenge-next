@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import clsx from "clsx";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
@@ -8,6 +9,7 @@ import ErrorScreen from "../../components/ErrorScreen";
 import Routes from "../../constants/routes";
 import { REGEX_MAIL, REGEX_PASSWORD } from "../../constants/regex";
 import useLogin from "../../hooks/useLogin";
+import { LoginContext } from '../../config/context';
 
 import styles from "./styles.module.css";
 
@@ -23,13 +25,14 @@ const Login: NextPage = () => {
     formState: { errors },
   } = useForm<ILogin>();
   const router = useRouter();
-  const { data, mutate, ...dataQuery } = useLogin();
+  const { mutate, ...dataQuery } = useLogin();
+  const valueContext = useContext(LoginContext);
 
   const onSubmit: SubmitHandler<ILogin> = (dataForm) => {
-    const success = () => {
+    mutate(dataForm, { onSuccess: (data) => {
+      valueContext?.setToken(data.token)
       router.push(Routes.Home);
-    };
-    mutate(dataForm, { onSuccess: success });
+    }});
   };
 
   return (
