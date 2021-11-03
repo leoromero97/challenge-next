@@ -1,22 +1,21 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import React, { useState } from "react";
+import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { LoginProvider } from "../config/context";
 import "../styles/buttons.css";
 import "../styles/colors.css";
 import "../styles/fonts.css";
 import "../styles/globals.css";
 import "../styles/inputs.css";
 import "../styles/texts.css";
-import { LoginContext } from "../config/context";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient()
-  const [token, setToken] = useState('');
 
   return (
     <QueryClientProvider client={queryClient}>
-      <LoginContext.Provider value={{ token, setToken}}>
+      <LoginProvider> 
         <Head>
           <title>Next Challenge</title>
           <meta
@@ -26,8 +25,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Component {...pageProps} />
-      </LoginContext.Provider>
-      </QueryClientProvider>
+      </LoginProvider> 
+    </QueryClientProvider>
   );
 }
 
