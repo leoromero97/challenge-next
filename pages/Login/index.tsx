@@ -8,6 +8,7 @@ import ErrorScreen from "../../components/ErrorScreen";
 import Routes from "../../constants/routes";
 import { REGEX_MAIL, REGEX_PASSWORD } from "../../constants/regex";
 import useLogin from "../../hooks/useLogin";
+import { useAuthContext } from "../../context/loginContext";
 
 import styles from "./styles.module.css";
 
@@ -23,13 +24,14 @@ const Login: NextPage = () => {
     formState: { errors },
   } = useForm<ILogin>();
   const router = useRouter();
-  const { data, mutate, ...dataQuery } = useLogin();
+  const { mutate, ...dataQuery } = useLogin();
+  const { dispatch } = useAuthContext();
 
   const onSubmit: SubmitHandler<ILogin> = (dataForm) => {
-    const success = () => {
+    mutate(dataForm, { onSuccess: (data) => {
+      dispatch({type: 'setToken', payload: data.token})
       router.push(Routes.Home);
-    };
-    mutate(dataForm, { onSuccess: success });
+    }});
   };
 
   return (

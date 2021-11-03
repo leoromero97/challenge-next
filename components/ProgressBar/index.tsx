@@ -20,6 +20,7 @@ function ProgressBar({ message }: IProgressBar) {
         return newValue;
       });
     }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
