@@ -8,7 +8,7 @@ import ErrorScreen from "../../components/ErrorScreen";
 import Routes from "../../constants/routes";
 import { REGEX_MAIL, REGEX_PASSWORD } from "../../constants/regex";
 import useLogin from "../../hooks/useLogin";
-import { useAuthContext } from "../../config/context";
+import { useAuthContext } from "../../context/loginContext";
 
 import styles from "./styles.module.css";
 
